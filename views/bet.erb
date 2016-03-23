@@ -1,6 +1,8 @@
-<h1>Welcome to Blackjack...</h1>
-<h4>You have $500. How much would you like to bet?</h4>
-<form action="/getBetAmount" method="post">
+<h1>Make a bet for this round.</h1>
+<h6><%= session[:player_name] %> has $ <%= session[:player_pot].to_i %></h6>
+<br/>
+<h6>How much would you like to bet?</h6>
+<form action="/bet" method="post">
   Amount : <input type="text" name="bet_amount"/>
-  <input class='btn' type='submit'/>
+  <input class='btn' type='submit' label="bet"/>
 </form>
